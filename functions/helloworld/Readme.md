@@ -16,3 +16,8 @@ Go to ~/helloworld and execute the following command:
 Open your browser and trigger cloud function using the following url:
 
 https://GCP_REGION-PROJECT_ID.cloudfunctions.net/hello_http.cloudfunctions.net/hello_http?name=Matthias
+
+## Check logs
+Go to ~/helloworld and execute the following command:
+
+> gcloud functions logs read hello_http
