@@ -16,3 +16,11 @@ Create a pubsub topic:
 Go to ~/helloworld and execute the following command:
 
 > gcloud functions deploy hello_pubsub --trigger-topic test_topic --runtime python38
+
+Your cloud function is now ready.
+
+## Trigger Cloud Function by pubsub topic
+> gcloud pubsub topics publish test_topic --message="Matthias"
+
+## Read log to see your message
+> gcloud functions logs read hello_pubsub
