@@ -35,9 +35,8 @@ def hello_pubsub_write_file(event, context):
         r = requests.get(url, allow_redirects=True)
 
         BUCKET_NAME = 'wm-financial-data'
-        #BLOB_STR = '{"blob": "some json"}'
         BLOB_STR = r.content
-        BLOB_NAME = 'test-blob.txt'
+        BLOB_NAME = 'SSMI/SSMI_2021-12-31-16-06-22.csv'
 
         upload_blob(BUCKET_NAME, BLOB_STR, BLOB_NAME)
     else:
